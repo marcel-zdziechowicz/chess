@@ -1,0 +1,95 @@
+# C++ specific ignores
+*.obj
+*.o
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+*.out
+*.app
+*.i
+*.ii
+*.s
+*.su
+
+# Compiler generated files
+*.d
+*.dSYM/
+*.stackdump
+*.cproject
+*.project
+*.launch
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+_compile_commands.json
+CTestTestfile.cmake
+
+# Visual Studio generated files
+.vscode/
+.vs/
+*.code-workspace
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.suo
+*.ncb
+*.user
+*.rsrc
+*.sdf
+*.opensdf
+*.vcxproj.*
+*.pdb
+*.idb
+*.ipch
+*.opendb
+*.tlog
+*.lastbuildstate
+*.log
+*.ilk
+
+# Visual Studio Code specific files
+.vscode/
+
+# Backup files
+*.bak
+*.swp
+*.swo
+
+# Object files and executable
+*.obj
+*.exe
+*.out
+
+# Build directories
+build/
+bin/
+lib/
+target/
+
+# Linux specific ignores
+*.dSYM/
+*.o
+*.so
+*.a
+*.out
+*.app
+*.log
+*.dmp
+
+# Common IDE ignores
+.idea/
+*.iml
+*.ipr
+*.iws
+
+.git/
+.cache/
