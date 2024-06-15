@@ -93,3 +93,4 @@ target/
 
 .git/
 .cache/
+token.txt
