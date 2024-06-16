@@ -1,9 +1,11 @@
 #ifndef _ROOK_HPP_
 #define _ROOK_HPP_
 
-#include "ChessPiece.hpp"
+#include "Piece.hpp"
 
-class Rook : public ChessPiece
+namespace Chess {
+
+class Rook : public Piece
 {
 
 };
@@ -18,4 +20,5 @@ class WindowRook : public Rook
 
 };
 
+}
 #endif

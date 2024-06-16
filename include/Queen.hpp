@@ -1,9 +1,11 @@
 #ifndef _QUEEN_HPP_
 #define _QUEEN_HPP_
 
-#include "ChessPiece.hpp"
+#include "Piece.hpp"
 
-class Queen : public ChessPiece 
+namespace Chess {
+
+class Queen : public Piece 
 {
 
 };
@@ -18,4 +20,5 @@ class WindowQueen : public Queen
 
 };
 
+}
 #endif

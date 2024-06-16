@@ -1,9 +1,11 @@
 #ifndef _BISHOP_HPP_
 #define _BISHOP_HPP_
 
-#include "ChessPiece.hpp"
+#include "Piece.hpp"
 
-class Bishop : public ChessPiece
+namespace Chess {
+
+class Bishop : public Piece
 {
 
 };
@@ -18,4 +20,5 @@ class WindowBishop : public Bishop
 
 };
 
+}
 #endif

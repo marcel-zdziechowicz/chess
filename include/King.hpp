@@ -1,21 +1,24 @@
 #ifndef _KING_HPP_
 #define _KING_HPP_
 
-#include "ChessPiece.hpp"
+#include "Piece.hpp"
 
-class King : ChessPiece
+namespace Chess {
+
+class King : Piece
 {
 
 };
 
-class ConsoleKing : ChessPiece
+class ConsoleKing : Piece
 {
 
 };
 
-class WindowKing : ChessPiece
+class WindowKing : Piece
 {
 
 };
 
+}
 #endif

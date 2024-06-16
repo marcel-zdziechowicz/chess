@@ -1,9 +1,11 @@
 #ifndef _PAWN_HPP_
 #define _PAWN_HPP_
 
-#include "ChessPiece.hpp"
+#include "Piece.hpp"
 
-class Pawn : public ChessPiece 
+namespace Chess {
+
+class Pawn : public Piece 
 {
 
 };
@@ -18,4 +20,5 @@ class WindowPawn : public Pawn
 
 };
 
+}
 #endif

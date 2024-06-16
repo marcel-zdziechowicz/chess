@@ -1,44 +1,29 @@
-#ifndef _CHESS_BOARD_HPP_
-#define _CHESS_BOARD_HPP_
+#ifndef _BOARD_HPP_
+#define _BOARD_HPP_
 
-#include "ChessPieceFactory.hpp"
 #include <array>
 
-enum class Row {
-  A = 0,
-  B = 1,
-  C = 2,
-  D = 3,
-  E = 4,
-  F = 5,
-  G = 6,
-  H = 7,
-};
+#include "Miscellaneous.hpp"
+#include "Piece.hpp"
 
-enum class Col {
-  ONE   = 0,
-  TWO   = 1,
-  THREE = 2,
-  FOUR  = 3,
-  FIVE  = 4,
-  SIX   = 5,
-  SEVEN = 6,
-  EIGHT = 7,
-};
+namespace Chess {
 
-class ChessBoard
+class Board
 {
 public:
-  ChessBoard();
-  virtual ~ChessBoard() = 0;
-  // [[nodiscard]] ChessPiece* operator[](Row row);
-  // [[nodiscard]] const ChessPiece* operator[](Row row) const;
-  [[nodiscard]] ChessPiece* Move(Row row, Col col) = 0;
-  [[nodiscard]] const ChessPiece* Move(Row row, Col col) const = 0;
-  virtual void Highlight(Row row, uint8_t col) const = 0;
+  Board();
+  virtual ~Board() = 0;
+  [[nodiscard]] virtual Piece* operator[](Row row) = 0;
+  [[nodiscard]] virtual const Piece* operator[](Row row) const = 0;
+  [[nodiscard]] virtual Piece* GetPiece(Row row, Col col) = 0;
+  [[nodiscard]] virtual const Piece* GetPiece(Row row, Col col) const = 0;
+  virtual void Highlight(Row row, Col col) const = 0;
   virtual void Draw() const = 0;
+
 protected:
-  
+  std::array<std::array<Field, COLS>, ROWS> mBoard;
+  std::array<Piece*, NUM_PIECES> mBlackPieces;
+  std::array<Piece*, NUM_PIECES> mWhitePieces;
 };
 
 // while (true) {
@@ -96,7 +81,7 @@ protected:
 //  if the moves is even possible. And the thought of not doing field
 //  came back. Okay let's not do the field class. Or at least let's try not to.
 //
-class ConsoleChessBoard : public ChessBoard
+class ConsoleBoard : public Board
 {
 public:
 
@@ -104,7 +89,7 @@ private:
 
 };
 
-class WindowChessBoard : public ChessBoard
+class WindowBoard : public Board
 {
 public:
 
@@ -112,4 +97,5 @@ private:
 
 };
 
+}
 #endif

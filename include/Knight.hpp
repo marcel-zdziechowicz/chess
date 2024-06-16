@@ -1,9 +1,11 @@
 #ifndef _KNIGHT_HPP_
 #define _KNIGHT_HPP_
 
-#include "ChessPiece.hpp"
+#include "Piece.hpp"
 
-class Knight : public ChessPiece
+namespace Chess {
+
+class Knight : public Piece
 {
 
 };
@@ -18,4 +20,5 @@ class WindowKnight : public Knight
 
 };
 
+}
 #endif
