@@ -11,7 +11,7 @@ void PrintHelp()
   // Options:
   //   --mode {window | console}    Sets the mode for opening chess
   //   --help                       Display help
-  std::cout << 
+  std::cout << "Usage: chess [options]\n";
 }
 
 ApplicationBase* EvalCMDArguments(int argc, char** argv)
