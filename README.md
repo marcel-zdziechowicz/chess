@@ -23,16 +23,15 @@ Welcome to the Chess Game application! This project allows you to play chess in 
 
 ### Prerequisites
 
-- C++11 or higher
-- CMake 3.10 or higher
-- (Optional) Graphics library such as SDL2 for window mode
+- C++20 or higher
+- CMake 3.28 or higher
 
 ### Steps
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/yourusername/chess-game.git
-    cd chess-game
+    git clone https://github.com/marcel-zdziechowicz/chess.git
+    cd chess
     ```
 
 2. **Build the project:**
