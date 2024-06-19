@@ -41,3 +41,5 @@ Welcome to the Chess Game application! This project allows you to play chess in 
     cmake ..
     make
     ```
+
+### License: MIT
