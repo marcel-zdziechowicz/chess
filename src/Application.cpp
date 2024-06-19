@@ -7,13 +7,13 @@ namespace Chess {
 void PrintHelp()
 {
   // Usage: chess [options]
-  //
   // Options:
   //   --mode {window | console}    Sets the mode for opening chess
   //   --help                       Display help
   std::cout << "Usage: chess [options]\n\n";
   std::cout << "Options:\n";
   std::cout << "\t--mode {console | window}\n";
+  std::cout << "\t--help\n";
 }
 
 ApplicationBase* EvalCMDArguments(int argc, char** argv)
