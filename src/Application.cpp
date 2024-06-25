@@ -52,7 +52,7 @@ ApplicationBase* EvalCMDArguments(int argc, char** argv)
       return nullptr;//new WindowApplication;
     }
     else if (arguments[2] == "console") {
-      return nullptr;//new ConsoleApplication;
+      return new ConsoleApplication;
     }
     else {
       std::cout << std::format("Unknown mode: {}\n", arguments[2]);
@@ -63,5 +63,8 @@ ApplicationBase* EvalCMDArguments(int argc, char** argv)
   PrintHelp();
   return nullptr;
 }
+
+ApplicationBase::ApplicationBase() {}
+ApplicationBase::~ApplicationBase() {}
 
 }
